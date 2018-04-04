@@ -4,11 +4,13 @@
             "": "src"
         },
         "psr-4": {
-            "Acme\\": "src/Acme/"
+            "Acme\\": "src/Acme/",
+            "Moo\\": "src/Moo/"
         }
     },
     "require": {
         "phpunit/phpunit": "^7.0",
-        "phpspec/phpspec": "^4.3"
+        "phpspec/phpspec": "^4.3",
+        "phpunit/php-code-coverage": "^6.0"
     }
 }
