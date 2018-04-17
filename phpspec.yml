@@ -1,4 +1,7 @@
-suites:
-  kata_suite:
-    namespace: Kata
-    psr4_prefix: Kata
+#composer_suite_detection: true
+#suites:
+#  kata_suite:
+#    namespace: Kata
+#    psr4_prefix: Kata
+#    src_path: "%paths.config%/src/Kata"
+#    spec_path: "%paths.config%"

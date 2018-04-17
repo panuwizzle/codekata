@@ -8,7 +8,6 @@ use Prophecy\Argument;
 
 class FizzBuzzSpec extends ObjectBehavior
 {
-
     function it_should_say_fizz()
     {
         $this->sayit(3)->shouldReturn('Fizz');
