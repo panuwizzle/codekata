@@ -1,8 +1,8 @@
 <?php
 
-namespace spec;
+namespace spec\Kata;
 
-use FizzBuzz;
+use Kata\FizzBuzz;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

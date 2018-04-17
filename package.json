@@ -1,0 +1,26 @@
+{
+  "name": "codekata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-phpspec": "^0.5.5",
+    "gulp-notify": "^3.2.0",
+    "gulp-run": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panuwizzle/codekata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panuwizzle/codekata/issues"
+  },
+  "homepage": "https://github.com/panuwizzle/codekata#readme"
+}
