@@ -1,3 +1,5 @@
+node_modules/
+results/
 vendor/
 tags
 node_modules/

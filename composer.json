@@ -5,6 +5,8 @@
         }
     },
     "require": {
-        "phpspec/phpspec": "^4.3"
+        "phpunit/phpunit": "^7.0",
+        "phpspec/phpspec": "^4.3",
+        "phpunit/php-code-coverage": "^6.0"
     }
 }
