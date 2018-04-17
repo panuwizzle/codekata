@@ -1,7 +1,7 @@
 <?php
-namespace Moo;
+namespace Kata;
 
-class FizzBuzz 
+class FizzBuzz2 
 {
     public function check($num) 
     {

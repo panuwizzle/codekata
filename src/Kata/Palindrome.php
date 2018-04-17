@@ -1,5 +1,5 @@
 <?php
-namespace Acme;
+namespace Kata;
 
 class Palindrome 
 {

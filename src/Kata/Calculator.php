@@ -1,5 +1,5 @@
 <?php
-namespace Moo;
+namespace Kata;
 
 class Calculator 
 {
