@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Moo\Grade;
+use Kata\Grade;
 
 final class GradeTest extends TestCase
 {

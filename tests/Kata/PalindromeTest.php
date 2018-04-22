@@ -1,8 +1,8 @@
 <?php
-namespace Acme;
+namespace Kata;
 
 use PHPUnit\Framework\TestCase;
-use Acme\Palindrome;
+use Kata\Palindrome;
 
 class PalindromeTest extends TestCase
 {

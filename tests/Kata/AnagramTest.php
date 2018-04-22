@@ -1,8 +1,8 @@
 <?php
-namespace Acme;
+namespace Kata;
 
 use PHPUnit\Framework\TestCase;
-use Acme\Anagram;
+use Kata\Anagram;
 
 class AnagramTest extends TestCase
 {
@@ -16,6 +16,13 @@ class AnagramTest extends TestCase
 
         $this->assertFalse($obj->isAnagram('belt', 'yelb'));
         $this->assertFalse($obj->isAnagram('america', 'xeamirac'));
+        $this->assertTrue($obj->isAnagram('abcde', 'cd eba'));
+        $this->assertTrue($obj->isAnagram('abcde', 'dceab'));
+        $this->assertTrue($obj->isAnagram('abcde', 'dcaeb'));
+        $this->assertTrue($obj->isAnagram('python', 'typhon'));
+
+        $this->assertFalse($obj->isAnagram('abcde', 'dcaebd'));
+        $this->assertFalse($obj->isAnagram('abcde', 'fffff'));
 
     }
 }

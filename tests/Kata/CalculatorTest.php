@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Moo\Calculator;
-use Moo\Grade;
+use Kata\Calculator;
+use Kata\Grade;
 
 final class CalculatorTest extends TestCase
 {
