@@ -3,3 +3,4 @@ results/
 vendor/
 tags
 node_modules/
+.vscode/
