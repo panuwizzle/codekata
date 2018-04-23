@@ -30,8 +30,11 @@ class Bot
     {
     }
 
-    private function parseCommand($command)
+    public function parseCommand($command)
     {
+        $matches = [];
+        preg_match_all('/W\d+|[LR]/', $command, $matches);
+        return $matches[0];
     }
 
     public function getCurrentPosition()
