@@ -3,7 +3,7 @@ var phpspec = require('gulp-phpspec');
 var notify = require('gulp-notify');
 
 gulp.task('test', function() {
-    gulp.src('spec/**/*.php')
+    gulp.src('phpspec.yml')
     .pipe(phpspec('', { clear: true, notify: true}))
     .on('error', notify.onError({
         title: 'Crap',

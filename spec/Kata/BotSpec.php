@@ -73,4 +73,11 @@ class BotSpec extends ObjectBehavior
         $this->walk(2);
         $this->getCurrentPosition()->shouldReturn([0, 2]);
     }
+
+    function it_should_parse_the_command()
+    {
+        $command = "LW1RW1";
+        $this->parseCommand($command)->shouldReturn([]);
+
+    }
 }

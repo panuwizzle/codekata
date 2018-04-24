@@ -1,8 +1,9 @@
 <?php
 require 'vendor/autoload.php';
 
-use Kata\FizzBuzz;
+use Kata\Bot;
 
-$fb = new FizzBuzz();
+$fb = new Bot();
 
-echo $fb->sayitinarray(100);
+$cmds = $fb->parseCommand('LW1RW2LW3RW4');
+print_r($cmds);

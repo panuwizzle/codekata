@@ -26,12 +26,14 @@ class Bot
         $this->commandStack = [];
     }
 
-    public function setCommand($command)
+    public function execute()
     {
     }
 
-    private function parseCommand($command)
+    public function parseCommand($command)
     {
+        preg_match_all('/[(L)(W\d+)]/', $command, $matches); //, PREG_OFFSET_CAPTURE);
+        return $matches; 
     }
 
     public function getCurrentPosition()
