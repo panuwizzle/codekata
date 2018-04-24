@@ -77,7 +77,8 @@ class BotSpec extends ObjectBehavior
     function it_should_parse_the_command()
     {
         $command = "LW1RW1";
-        $this->parseCommand($command)->shouldReturn([]);
+        $this->parseCommand($command)->shouldReturn(['L','W1','R','W1']);
+    }
 
     function it_should_parse_the_command_to_array()
     {
@@ -91,3 +92,4 @@ class BotSpec extends ObjectBehavior
         $this->parseCommand($command)->shouldReturn(['L','L','L','L','R','R','R','R', 'W19']);
     }
 }
+
