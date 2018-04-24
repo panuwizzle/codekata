@@ -79,5 +79,15 @@ class BotSpec extends ObjectBehavior
         $command = "LW1RW1";
         $this->parseCommand($command)->shouldReturn([]);
 
+    function it_should_parse_the_command_to_array()
+    {
+        $command = "LW1RW2LW3RW4";
+        $this->parseCommand($command)->shouldReturn(['L','W1','R','W2','L','W3','R','W4']);
+    }
+
+    function it_should_parse_the_command_to_array2()
+    {
+        $command = "LLLLRRRRW19";
+        $this->parseCommand($command)->shouldReturn(['L','L','L','L','R','R','R','R', 'W19']);
     }
 }
