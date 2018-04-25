@@ -1,6 +1,7 @@
 <?php
 namespace Kata;
 
+use Kata\CommandWalk;
 /*
  * A robot that walk by parsing the instruction
  * L, R - turn left or right
@@ -30,6 +31,11 @@ class Bot
     {
         $pos = $this->getCurrentPosition();
         return sprintf("pos: %s,%s, facing: %s\n", $pos[0], $pos[1], $this->getFacing());
+    }
+
+    public function setCurrentPosition($pos)
+    {
+        $this->currentPosition = $pos;
     }
 
     public function execute($command)
