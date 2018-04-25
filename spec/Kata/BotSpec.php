@@ -91,5 +91,34 @@ class BotSpec extends ObjectBehavior
         $command = "LLLLRRRRW19";
         $this->parseCommand($command)->shouldReturn(['L','L','L','L','R','R','R','R', 'W19']);
     }
+
+    function it_should_walk_north_west_1_step_and_face_north()
+    {
+        $command = "LW1RW1";
+        $this->execute($command);
+        $this->getCurrentPosition()->shouldReturn([-1, 1]);
+        $this->getFacing()->shouldReturn('North');
+    }
+    function it_should_walk_north_east_1_step_and_face_north()
+    {
+        $command = "RW1LW1";
+        $this->execute($command);
+        $this->getCurrentPosition()->shouldReturn([1, 1]);
+        $this->getFacing()->shouldReturn('North');
+    }
+    function it_should_walk_south_east_1_step_and_face_south()
+    {
+        $command = "RW1RW1";
+        $this->execute($command);
+        $this->getCurrentPosition()->shouldReturn([1, -1]);
+        $this->getFacing()->shouldReturn('South');
+    }
+    function it_should_walk_south_west_1_step_and_face_south()
+    {
+        $command = "LW1LW1";
+        $this->execute($command);
+        $this->getCurrentPosition()->shouldReturn([-1, -1]);
+        $this->getFacing()->shouldReturn('South');
+    }
 }
 

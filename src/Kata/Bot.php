@@ -26,8 +26,23 @@ class Bot
         $this->commandStack = [];
     }
 
-    public function execute()
+    public function status()
     {
+        $pos = $this->getCurrentPosition();
+        return sprintf("pos: %s,%s, facing: %s\n", $pos[0], $pos[1], $this->getFacing());
+    }
+
+    public function execute($command)
+    {
+        $this->commandStack = $this->parseCommand($command);
+        foreach ($this->commandStack as $cmdStep) {
+            if (in_array($cmdStep, ['R','L'])) {
+                $this->turn($cmdStep);
+            } else {
+                $this->walk((int)substr($cmdStep, 1));
+            }
+        }
+        $this->resetCommand();
     }
 
     public function parseCommand($command)
@@ -80,8 +95,8 @@ class Bot
         // south
         if ($this->facing == self::DIRECTION_SOUTH) {
             $this->currentPosition = [
-                $this->currentPosition[0] + $step, 
-                $this->currentPosition[1]
+                $this->currentPosition[0], 
+                $this->currentPosition[1] - $step
             ];
         }
     }
